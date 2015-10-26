@@ -1,4 +1,5 @@
-## OFFHEAP - JavaOne
+<img src="images/offheap.jpg"/>
+## JavaOne 2015 October 26, 2015 
 
 
 
@@ -12,6 +13,8 @@
 
 
 
-## Toast
+## Tweet your topics to Topics #offheap
 
 
+
+## Cheers!!!

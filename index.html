@@ -64,63 +64,63 @@
 		<script src="js/reveal.min.js"></script>
 		<script src="js/jquery-1.7.min.js"></script>
 		<script type="text/javascript">
-  (function($) {
-    $('body').on('keydown', function(e) {
-      // "0"
-      if(e.keyCode === 48) {
-        countdown.toggle($('.countdown', Reveal.getCurrentSlide()));
-      }
-    });
-    Reveal.addEventListener('slidechanged', function(event) {
-      var target = jQuery('.countdown', event.currentSlide);
-      if(target.length) {
-        countdown.init(target);
-      }
-    });
-    var countdown = {
-      running   : false,
-      interval  : null,
-      init : function init(target) {
-        var remaining = target.data('seconds');
-        this.render(target, remaining);
-      },
-      render : function render(target, remaining) {
-        var minutes = Math.floor(remaining / 60);
-        var seconds = remaining - (minutes * 60);
-        // 25 minutes 58 seconds
-        target.text([minutes, 'minutes', seconds, 'seconds remaining'].join(' '));
-      },
-      toggle : function toggle(target) {
-        if(target.length) {
-          if(this.running) {
-            this.stop(target);
-          }
-          else {
-            this.play(target);
-          }
-        }
-      },
-      play : function play(target) {
-        var self       = this;
-        var remaining  = target.data('seconds');
-        this.running   = true;
-        this.interval  = setInterval(function timer() {
-          remaining -= 1;
-          if(remaining <= 0) {
-            self.stop(target);
-            return;
-          }
-          self.render(target, remaining);
-        }, 1000);
-      },
-      stop : function stop(target) {
-        this.running   = false;
-        clearInterval(this.interval);
-        target.text('All finished!');
-      }
-    };
-  })(jQuery);
-</script>
+	  (function($) {
+	    $('body').on('keydown', function(e) {
+	      // "0"
+	      if(e.keyCode === 48) {
+	        countdown.toggle($('.countdown', Reveal.getCurrentSlide()));
+	      }
+	    });
+	    Reveal.addEventListener('slidechanged', function(event) {
+	      var target = jQuery('.countdown', event.currentSlide);
+	      if(target.length) {
+	        countdown.init(target);
+	      }
+	    });
+	    var countdown = {
+	      running   : false,
+	      interval  : null,
+	      init : function init(target) {
+	        var remaining = target.data('seconds');
+	        this.render(target, remaining);
+	      },
+	      render : function render(target, remaining) {
+	        var minutes = Math.floor(remaining / 60);
+	        var seconds = remaining - (minutes * 60);
+	        // 25 minutes 58 seconds
+	        target.text([minutes, 'minutes', seconds, 'seconds remaining'].join(' '));
+	      },
+	      toggle : function toggle(target) {
+	        if(target.length) {
+	          if(this.running) {
+	            this.stop(target);
+	          }
+	          else {
+	            this.play(target);
+	          }
+	        }
+	      },
+	      play : function play(target) {
+	        var self       = this;
+	        var remaining  = target.data('seconds');
+	        this.running   = true;
+	        this.interval  = setInterval(function timer() {
+	          remaining -= 1;
+	          if(remaining <= 0) {
+	            self.stop(target);
+	            return;
+	          }
+	          self.render(target, remaining);
+	        }, 1000);
+	      },
+	      stop : function stop(target) {
+	        this.running   = false;
+	        clearInterval(this.interval);
+	        target.text('All finished!');
+	      }
+	    };
+	  })(jQuery);
+	</script>
 
 		<script>
 
