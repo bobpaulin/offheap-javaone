@@ -11,8 +11,7 @@ autoStart:false, countdown: true
 clock.setTime(600);
 clock.start();
 </script>
-<link rel="stylesheet" href="lib/css/flipclock.css">
-<script src="lib/js/flipclock.js"></script>	
+
 
 
 ## Radar
