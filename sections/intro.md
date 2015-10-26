@@ -13,7 +13,7 @@
 
 
 
-## Tweet your topics to Topics #offheapj1
+## Tweet your topics to #offheap or #offheapj1
 
 
 

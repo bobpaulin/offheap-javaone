@@ -4,7 +4,7 @@
 
 
 
-## Radar
+## Tech Radar
 
 <span class="countdown" data-seconds="600"></span>
 
